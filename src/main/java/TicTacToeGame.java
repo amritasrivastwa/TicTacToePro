@@ -10,8 +10,12 @@ public class TicTacToeGame {
     }
 
     public void playAtPosition(int positionNumber) {
-        char currentPlayer = previousPlayer == PLAYER_X ? PLAYER_O : PLAYER_X;
+        char currentPlayer = getCurrentPlayer();
         board[positionNumber] = currentPlayer;
         previousPlayer = currentPlayer;
+    }
+
+    private char getCurrentPlayer() {
+        return previousPlayer == PLAYER_X ? PLAYER_O : PLAYER_X;
     }
 }
