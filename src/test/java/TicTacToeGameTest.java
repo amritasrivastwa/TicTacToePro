@@ -7,8 +7,10 @@ public class TicTacToeGameTest {
 
     @Test
     public void shouldReturnXOnFirstTurn(){
-
         TicTacToeGame ticTacToeGame = new TicTacToeGame();
-        Assert.assertEquals('X',ticTacToeGame.getPlayer());
+
+        Assert.assertEquals('X',ticTacToeGame.getPlayer(1));
     }
+
+
 }
