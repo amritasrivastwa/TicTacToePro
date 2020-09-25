@@ -35,5 +35,17 @@ public class TicTacToeGameTest {
 
         Assert.assertEquals(PLAYER_X, ticTacToeGame.getPlayer(3));
     }
+    @Test
+    public void shouldDetermineWinnerAfterFillingFirstColumn() {
+        ticTacToeGame.playAtPosition(1);
+        ticTacToeGame.playAtPosition(2);
+        ticTacToeGame.playAtPosition(3);
+        ticTacToeGame.playAtPosition(4);
+        ticTacToeGame.playAtPosition(5);
+        ticTacToeGame.playAtPosition(6);
+        ticTacToeGame.playAtPosition(7);
+
+        Assert.assertEquals(PLAYER_X, ticTacToeGame.getWinner());
+    }
 
 }
