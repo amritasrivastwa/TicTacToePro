@@ -20,6 +20,9 @@ public class TicTacToeGame {
     }
 
     public char getWinner() {
-        return PLAYER_X;
+        if(getPlayer(1)==PLAYER_X && getPlayer(4)==PLAYER_X && getPlayer(7)==PLAYER_X){
+            return PLAYER_X;
+        }
+        return PLAYER_O;
     }
 }
