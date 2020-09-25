@@ -1,6 +1,9 @@
 public class TicTacToeGame {
 
     public char getPlayer(int slotNumber) {
-        return 'X';
+        if (slotNumber == 1)
+            return 'X';
+        else
+            return 'O';
     }
 }
