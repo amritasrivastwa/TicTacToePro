@@ -2,8 +2,9 @@ public class TicTacToeGame {
 
     public static final char PLAYER_X = 'X';
     public static final char PLAYER_O = 'O';
+
     char previousPlayer;
-    char[] board = new char[9];
+    char[] board = new char[10];
 
     public char getPlayer(int slotNumber) {
         return board[slotNumber];
@@ -11,7 +12,7 @@ public class TicTacToeGame {
 
     public void playAtPosition(int positionNumber) {
         char currentPlayer = getCurrentPlayer();
-        board[positionNumber] = currentPlayer;
+        board[positionNumber]= currentPlayer;
         previousPlayer = currentPlayer;
     }
 
@@ -23,6 +24,7 @@ public class TicTacToeGame {
         if(getPlayer(1)==PLAYER_X && getPlayer(4)==PLAYER_X && getPlayer(7)==PLAYER_X){
             return PLAYER_X;
         }
-        return PLAYER_O;
+            return PLAYER_O;
+
     }
 }
