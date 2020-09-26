@@ -27,9 +27,11 @@ public class TicTacToeGame {
             return PLAYER_X;
         } else if (getPlayer(3) == PLAYER_X && getPlayer(6) == PLAYER_X && getPlayer(9) == PLAYER_X) {
             return PLAYER_X;
+        } else if (getPlayer(1) == PLAYER_O && getPlayer(4) == PLAYER_O && getPlayer(7) == PLAYER_O) {
+            return PLAYER_O;
         } else if (getPlayer(2) == PLAYER_O && getPlayer(5) == PLAYER_O && getPlayer(8) == PLAYER_O) {
             return PLAYER_O;
-        } else if (getPlayer(1) == PLAYER_O && getPlayer(4) == PLAYER_O && getPlayer(7) == PLAYER_O) {
+        } else if (getPlayer(3) == PLAYER_O && getPlayer(6) == PLAYER_O && getPlayer(9) == PLAYER_O) {
             return PLAYER_O;
         }
 
