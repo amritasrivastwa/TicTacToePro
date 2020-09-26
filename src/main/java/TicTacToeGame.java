@@ -12,7 +12,7 @@ public class TicTacToeGame {
 
     public void playAtPosition(int positionNumber) {
         char currentPlayer = getCurrentPlayer();
-        board[positionNumber]= currentPlayer;
+        board[positionNumber] = currentPlayer;
         previousPlayer = currentPlayer;
     }
 
@@ -21,10 +21,13 @@ public class TicTacToeGame {
     }
 
     public char getWinner() {
-        if(getPlayer(1)==PLAYER_X && getPlayer(4)==PLAYER_X && getPlayer(7)==PLAYER_X){
+        if (getPlayer(1) == PLAYER_X && getPlayer(4) == PLAYER_X && getPlayer(7) == PLAYER_X) {
             return PLAYER_X;
-        }
+        } else if (getPlayer(2) == PLAYER_X && getPlayer(5) == PLAYER_X && getPlayer(8) == PLAYER_X) {
+            return PLAYER_X;
+        } else if (getPlayer(2) == PLAYER_O && getPlayer(5) == PLAYER_O && getPlayer(8) == PLAYER_O) {
             return PLAYER_O;
-
+        }
+      return 0;
     }
 }
