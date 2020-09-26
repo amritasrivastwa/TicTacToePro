@@ -27,6 +27,7 @@ public class TicTacToeGameTest {
 
         Assert.assertEquals(PLAYER_O, ticTacToeGame.getPlayer(2));
     }
+
     @Test
     public void shouldReturnXonThirdTurn() {
         ticTacToeGame.playAtPosition(1);
@@ -35,6 +36,7 @@ public class TicTacToeGameTest {
 
         Assert.assertEquals(PLAYER_X, ticTacToeGame.getPlayer(3));
     }
+
     @Test
     public void shouldDetermineWinnerXAfterFillingFirstColumn() {
         ticTacToeGame.playAtPosition(1);
@@ -45,6 +47,7 @@ public class TicTacToeGameTest {
 
         Assert.assertEquals(PLAYER_X, ticTacToeGame.getWinner());
     }
+
     @Test
     public void shouldDetermineWinnerXAfterFillingSecondColumn() {
         ticTacToeGame.playAtPosition(2);
@@ -55,6 +58,19 @@ public class TicTacToeGameTest {
 
         Assert.assertEquals(PLAYER_X, ticTacToeGame.getWinner());
     }
+
+    @Test
+    public void shouldDetermineWinnerOAfterFillingFirstColumn() {
+        ticTacToeGame.playAtPosition(2);
+        ticTacToeGame.playAtPosition(1);
+        ticTacToeGame.playAtPosition(5);
+        ticTacToeGame.playAtPosition(4);
+        ticTacToeGame.playAtPosition(6);
+        ticTacToeGame.playAtPosition(7);
+
+        Assert.assertEquals(PLAYER_O, ticTacToeGame.getWinner());
+    }
+
     @Test
     public void shouldDetermineWinnerOAfterFillingSecondColumn() {
         ticTacToeGame.playAtPosition(1);
