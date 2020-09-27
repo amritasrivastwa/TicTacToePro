@@ -7,6 +7,7 @@ public class TicTacToeGame {
     char[] board = new char[10];
 
     public char getPlayer(int slotNumber) {
+
         return board[slotNumber];
     }
 
@@ -17,6 +18,7 @@ public class TicTacToeGame {
     }
 
     private char getCurrentPlayer() {
+
         return previousPlayer == PLAYER_X ? PLAYER_O : PLAYER_X;
     }
 
@@ -34,15 +36,22 @@ public class TicTacToeGame {
         } else if (getPlayer(3) == PLAYER_O && getPlayer(6) == PLAYER_O && getPlayer(9) == PLAYER_O) {
             return PLAYER_O;
         }
-        if (getPlayer(1) == PLAYER_X && getPlayer(2) == PLAYER_X && getPlayer(3) == PLAYER_X) {
+          else if (getPlayer(1) == PLAYER_X && getPlayer(2) == PLAYER_X && getPlayer(3) == PLAYER_X) {
             return PLAYER_X;
         } else if (getPlayer(1) == PLAYER_O && getPlayer(2) == PLAYER_O && getPlayer(3) == PLAYER_O) {
             return PLAYER_O;
         }
-        if (getPlayer(4) == PLAYER_X && getPlayer(5) == PLAYER_X && getPlayer(6) == PLAYER_X) {
+        else if (getPlayer(4) == PLAYER_X && getPlayer(5) == PLAYER_X && getPlayer(6) == PLAYER_X) {
+            return PLAYER_X;
+        } else if (getPlayer(4) == PLAYER_O && getPlayer(5) == PLAYER_O && getPlayer(6) == PLAYER_O) {
+            return PLAYER_O;
+        }
+         else if (getPlayer(7) == PLAYER_X && getPlayer(8) == PLAYER_X && getPlayer(9) == PLAYER_X) {
             return PLAYER_X;
         }
-
+        else if (getPlayer(7) == PLAYER_O && getPlayer(8) == PLAYER_O && getPlayer(9) == PLAYER_O) {
+            return PLAYER_O;
+        }
         return 0;
     }
 }

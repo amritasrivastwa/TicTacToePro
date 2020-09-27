@@ -138,6 +138,38 @@ public class TicTacToeGameTest {
 
         Assert.assertEquals(PLAYER_X, ticTacToeGame.getWinner());
     }
+    @Test
+    public void shouldDetermineWinnerOAfterFillingSecondRow() {
+        ticTacToeGame.playAtPosition(1);
+        ticTacToeGame.playAtPosition(4);
+        ticTacToeGame.playAtPosition(2);
+        ticTacToeGame.playAtPosition(5);
+        ticTacToeGame.playAtPosition(7);
+        ticTacToeGame.playAtPosition(6);
+
+        Assert.assertEquals(PLAYER_O, ticTacToeGame.getWinner());
+    }
+    @Test
+    public void shouldDetermineWinnerXAfterFillingThirdRow() {
+        ticTacToeGame.playAtPosition(7);
+        ticTacToeGame.playAtPosition(1);
+        ticTacToeGame.playAtPosition(8);
+        ticTacToeGame.playAtPosition(2);
+        ticTacToeGame.playAtPosition(9);
+
+        Assert.assertEquals(PLAYER_X, ticTacToeGame.getWinner());
+    }
+    @Test
+    public void shouldDetermineWinnerOAfterFillingThirdRow() {
+        ticTacToeGame.playAtPosition(1);
+        ticTacToeGame.playAtPosition(7);
+        ticTacToeGame.playAtPosition(2);
+        ticTacToeGame.playAtPosition(8);
+        ticTacToeGame.playAtPosition(5);
+        ticTacToeGame.playAtPosition(9);
+
+        Assert.assertEquals(PLAYER_O, ticTacToeGame.getWinner());
+    }
 
 
 }
